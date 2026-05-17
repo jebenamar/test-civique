@@ -2,6 +2,7 @@ import { useState } from 'react';
 import HomePage from './components/HomePage';
 import QuizPage from './components/QuizPage';
 import ResultsPage from './components/ResultsPage';
+import CivicTestsPage from './components/CivicTestsPage';
 import './App.css';
 
 export default function App() {
@@ -12,6 +13,12 @@ export default function App() {
   function handleSelectQuiz(categoryId) {
     setSelectedCategoryId(categoryId);
     setScreen('quiz');
+  }
+
+  function handleOpenCivicTests() {
+    setSelectedCategoryId(null);
+    setQuizResults(null);
+    setScreen('civic-tests');
   }
 
   function handleQuizFinish(results) {
@@ -32,7 +39,13 @@ export default function App() {
   return (
     <div className="app">
       {screen === 'home' && (
-        <HomePage onSelectQuiz={handleSelectQuiz} />
+        <HomePage
+          onSelectQuiz={handleSelectQuiz}
+          onOpenCivicTests={handleOpenCivicTests}
+        />
+      )}
+      {screen === 'civic-tests' && (
+        <CivicTestsPage onHome={handleHome} />
       )}
       {screen === 'quiz' && (
         <QuizPage

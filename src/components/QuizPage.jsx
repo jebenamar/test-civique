@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { quizCategories, quizQuestions } from '../data/quizData';
 
 export default function QuizPage({ categoryId, onFinish, onBack }) {
@@ -13,11 +13,6 @@ export default function QuizPage({ categoryId, onFinish, onBack }) {
 
   const currentQuestion = questions[currentIndex];
   const progress = ((currentIndex + 1) / questions.length) * 100;
-
-  useEffect(() => {
-    setSelectedAnswer(null);
-    setAnswered(false);
-  }, [currentIndex]);
 
   function handleSelectAnswer(optionIndex) {
     if (answered) return;
@@ -42,6 +37,8 @@ export default function QuizPage({ categoryId, onFinish, onBack }) {
     setAnimating(true);
     setTimeout(() => {
       if (currentIndex < questions.length - 1) {
+        setSelectedAnswer(null);
+        setAnswered(false);
         setCurrentIndex((i) => i + 1);
       } else {
         onFinish({

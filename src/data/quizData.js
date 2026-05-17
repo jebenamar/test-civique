@@ -1934,3 +1934,57 @@ export const quizQuestions = {
     },
   ],
 };
+
+export const civicTestPassingScore = 32;
+
+const civicQuestionPool = quizCategories.flatMap((category) =>
+  (quizQuestions[category.id] || [])
+    .filter((question) => question.options?.length === 4)
+    .map((question) => ({
+      ...question,
+      sourceCategoryId: category.id,
+      sourceCategoryTitle: category.title,
+      sourceCategoryIcon: category.icon,
+      poolId: `${category.id}-${question.id}`,
+    }))
+);
+
+function addUniqueQuestion(testQuestions, seen, question) {
+  if (!question || seen.has(question.poolId)) return;
+  seen.add(question.poolId);
+  testQuestions.push(question);
+}
+
+function buildCivicTest(testIndex) {
+  const testQuestions = [];
+  const seen = new Set();
+
+  quizCategories.forEach((category, categoryIndex) => {
+    const categoryQuestions = civicQuestionPool.filter(
+      (question) => question.sourceCategoryId === category.id
+    );
+    const question =
+      categoryQuestions[(testIndex * 3 + categoryIndex * 5) % categoryQuestions.length];
+    addUniqueQuestion(testQuestions, seen, question);
+  });
+
+  for (let step = 0; testQuestions.length < 40 && step < civicQuestionPool.length * 2; step += 1) {
+    const question = civicQuestionPool[(testIndex * 31 + step * 11) % civicQuestionPool.length];
+    addUniqueQuestion(testQuestions, seen, question);
+  }
+
+  return {
+    id: testIndex + 1,
+    title: `Test civique ${testIndex + 1}`,
+    description: "40 questions couvrant l'ensemble des thèmes du test civique.",
+    questionCount: testQuestions.length,
+    passingScore: civicTestPassingScore,
+    questions: testQuestions.map((question, questionIndex) => ({
+      ...question,
+      id: `test-${testIndex + 1}-question-${questionIndex + 1}`,
+      originalQuestionId: question.poolId,
+    })),
+  };
+}
+
+export const civicTests = Array.from({ length: 10 }, (_, index) => buildCivicTest(index));

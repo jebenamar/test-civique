@@ -1,6 +1,6 @@
 import { quizCategories } from '../data/quizData';
 
-export default function HomePage({ onSelectQuiz }) {
+export default function HomePage({ onSelectQuiz, onOpenCivicTests }) {
   return (
     <div className="home-page">
       <header className="hero">
@@ -30,6 +30,20 @@ export default function HomePage({ onSelectQuiz }) {
       </header>
 
       <main className="quiz-grid-section">
+        <section className="civic-entry-section">
+          <div className="civic-entry-copy">
+            <span className="civic-entry-kicker">Simulation complète</span>
+            <h2>10 tests civiques blancs</h2>
+            <p>
+              Chaque test contient 40 questions sur l'ensemble des thèmes. Il faut
+              32 bonnes réponses pour réussir.
+            </p>
+          </div>
+          <button className="civic-entry-btn" onClick={onOpenCivicTests}>
+            Commencer un test blanc
+            <span>→</span>
+          </button>
+        </section>
         <h2 className="section-title">Choisissez un thème</h2>
         <p className="section-subtitle">
           Sélectionnez un QCM ci-dessous pour commencer votre entraînement
