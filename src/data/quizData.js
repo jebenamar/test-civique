@@ -301,6 +301,23 @@ export const quizQuestions = {
       options: ["Bordeaux", "La Rochelle", "Nantes", "Le Havre"],
       correct: 2,
     },
+    {
+      id: 26,
+      question: "Qui était Charles de Gaulle ?",
+      options: [
+        "Un maréchal de la Première Guerre mondiale",
+        "Un général qui a lancé l'appel du 18 juin 1940 et fondé la Ve République",
+        "Un président de la IVe République",
+        "Un Premier ministre durant la Libération",
+      ],
+      correct: 1,
+    },
+    {
+      id: 27,
+      question: "En quelle année s'est terminée la Seconde Guerre mondiale en Europe ?",
+      options: ["1943", "1944", "1945", "1946"],
+      correct: 2,
+    },
   ],
 
   2: [
@@ -442,6 +459,39 @@ export const quizQuestions = {
         "Une permission accordée par le gouvernement",
       ],
       correct: 2,
+    },
+    {
+      id: 14,
+      question: "Les hommes et les femmes ont-ils les mêmes droits en France ?",
+      options: [
+        "Non, certaines différences légales subsistent en matière de travail",
+        "Non, l'homme reste légalement le chef de famille",
+        "Oui, la loi garantit l'égalité complète entre hommes et femmes",
+        "Oui, mais seulement pour les personnes nées en France",
+      ],
+      correct: 2,
+    },
+    {
+      id: 15,
+      question: "Votre fille veut pratiquer un sport dans un club qui refuse les filles : peut-elle y être admise ?",
+      options: [
+        "Non, les clubs sportifs sont libres de fixer leurs propres règles d'admission",
+        "Non, sauf si le club reçoit des subventions publiques",
+        "Oui, toute discrimination fondée sur le sexe est interdite par la loi",
+        "Oui, mais seulement pour les sports non-contact",
+      ],
+      correct: 2,
+    },
+    {
+      id: 16,
+      question: "Un collègue tient des propos racistes au travail : quelle réaction est conforme aux valeurs républicaines ?",
+      options: [
+        "Ne rien dire pour préserver l'ambiance de travail",
+        "Le signaler à la direction ou aux représentants du personnel, car le racisme est puni par la loi",
+        "Répondre avec des propos contraires pour rétablir l'équilibre",
+        "Contacter les médias pour exposer la situation",
+      ],
+      correct: 1,
     },
   ],
 
@@ -636,6 +686,34 @@ export const quizQuestions = {
         "Diriger la police nationale et les tribunaux",
       ],
       correct: 2,
+    },
+    {
+      id: 21,
+      question: "Combien de députés compte l'Assemblée nationale ?",
+      options: ["348", "455", "577", "650"],
+      correct: 2,
+    },
+    {
+      id: 22,
+      question: "Quelle est la principale différence entre le Sénat et l'Assemblée nationale ?",
+      options: [
+        "Le Sénat vote les lois, l'Assemblée nationale les applique",
+        "Les sénateurs sont élus au suffrage universel direct, les députés indirectement",
+        "L'Assemblée nationale a le dernier mot en cas de désaccord persistant avec le Sénat",
+        "Le Sénat représente les citoyens, l'Assemblée nationale représente les régions",
+      ],
+      correct: 2,
+    },
+    {
+      id: 23,
+      question: "Que signifie le principe de séparation des pouvoirs ?",
+      options: [
+        "Les pouvoirs exécutif, législatif et judiciaire sont concentrés dans les mains du Président",
+        "Le gouvernement, le Parlement et les tribunaux sont indépendants et se contrôlent mutuellement",
+        "L'État est séparé des régions et des communes",
+        "Les citoyens sont séparés des institutions politiques",
+      ],
+      correct: 1,
     },
   ],
 
@@ -869,6 +947,28 @@ export const quizQuestions = {
       ],
       correct: 2,
     },
+    {
+      id: 13,
+      question: "Une école publique peut-elle imposer une pratique religieuse à ses élèves ?",
+      options: [
+        "Oui, si la majorité des parents est d'accord",
+        "Non, sauf dans les régions à forte tradition religieuse",
+        "Oui, lors des cours d'éducation civique",
+        "Non, la laïcité interdit toute pratique religieuse imposée dans les écoles publiques",
+      ],
+      correct: 3,
+    },
+    {
+      id: 14,
+      question: "Peut-on refuser de serrer la main d'une femme au nom de sa religion dans un cadre professionnel ?",
+      options: [
+        "Oui, la liberté religieuse prime sur les usages professionnels",
+        "Non, dans un cadre professionnel, ce refus peut constituer une discrimination sexiste",
+        "Oui, à condition d'en informer son employeur au préalable",
+        "Non, uniquement dans les administrations publiques",
+      ],
+      correct: 1,
+    },
   ],
 
   7: [
@@ -1039,6 +1139,83 @@ export const quizQuestions = {
         "Des droits créés récemment par l'Union européenne",
       ],
       correct: 2,
+    },
+    {
+      id: 18,
+      question: "Que faire si vous apprenez qu'un voisin subit des violences conjugales ?",
+      options: [
+        "Ne pas intervenir car c'est une affaire privée",
+        "Parler au conjoint violent pour le raisonner",
+        "Appeler le 3919 (numéro d'aide aux victimes de violences) ou le 17 (police)",
+        "Prévenir les autres voisins pour organiser une médiation collective",
+      ],
+      correct: 2,
+    },
+    {
+      id: 19,
+      question: "Est-il légal de discriminer quelqu'un en raison de sa religion ?",
+      options: [
+        "Oui, si cela est justifié par des raisons professionnelles",
+        "Non, sauf dans les associations à caractère religieux",
+        "Oui, dans le secteur privé uniquement",
+        "Non, la discrimination religieuse est interdite et punie par la loi",
+      ],
+      correct: 3,
+    },
+    {
+      id: 20,
+      question: "Quels sont les principaux devoirs d'un citoyen français ?",
+      options: [
+        "Voter, parler français et défendre les frontières",
+        "Travailler, épargner et déclarer ses revenus",
+        "Payer ses impôts, respecter les lois, participer à la vie civique et défendre le pays si nécessaire",
+        "S'inscrire dans une association, voter aux élections et obtenir la nationalité française",
+      ],
+      correct: 2,
+    },
+    {
+      id: 21,
+      question: "Pourquoi le paiement des impôts est-il important dans une démocratie ?",
+      options: [
+        "Pour enrichir l'État et ses dirigeants",
+        "Pour rembourser les dettes contractées auprès de l'Union européenne",
+        "Pour financer les services publics (éducation, santé, sécurité) et assurer la solidarité nationale",
+        "Pour permettre à l'État de se financer lors des élections",
+      ],
+      correct: 2,
+    },
+    {
+      id: 22,
+      question: "Que signifie le principe d'égalité devant la loi ?",
+      options: [
+        "Tous les citoyens paient les mêmes impôts",
+        "Toutes les lois s'appliquent de manière identique à tous, sans distinction d'origine, de sexe ou de religion",
+        "Tous les citoyens reçoivent les mêmes aides sociales",
+        "Tous les citoyens ont le même salaire garanti par l'État",
+      ],
+      correct: 1,
+    },
+    {
+      id: 23,
+      question: "Que faire si vous êtes victime d'une discrimination ?",
+      options: [
+        "Accepter la situation pour éviter les conflits",
+        "Porter plainte ou saisir le Défenseur des droits",
+        "Régler la situation uniquement à l'amiable avec l'auteur",
+        "Contacter uniquement votre syndicat ou association",
+      ],
+      correct: 1,
+    },
+    {
+      id: 24,
+      question: "Un voisin enferme sa femme à domicile contre sa volonté : que devez-vous faire ?",
+      options: [
+        "Ne pas intervenir, c'est une affaire conjugale privée",
+        "Discuter avec le voisin pour lui expliquer ses torts",
+        "Prévenir la famille de la victime pour qu'elle intervienne",
+        "Appeler la police (17) car il s'agit d'une séquestration, un crime grave",
+      ],
+      correct: 3,
     },
   ],
 
@@ -1349,6 +1526,17 @@ export const quizQuestions = {
       ],
       correct: 2,
     },
+    {
+      id: 11,
+      question: "Un étranger non européen peut-il voter aux élections en France ?",
+      options: [
+        "Oui, à toutes les élections après 5 ans de résidence",
+        "Oui, uniquement aux élections municipales après 5 ans de résidence",
+        "Non, seuls les citoyens français peuvent voter à toutes les élections",
+        "Non, sauf s'il dispose d'un titre de séjour de longue durée",
+      ],
+      correct: 2,
+    },
   ],
 
   11: [
@@ -1519,6 +1707,17 @@ export const quizQuestions = {
       id: 18,
       question: "Quel célèbre philosophe des Lumières a dénoncé l'esclavage ?",
       options: ["Victor Hugo", "Émile Zola", "Montesquieu", "Napoléon Bonaparte"],
+      correct: 2,
+    },
+    {
+      id: 19,
+      question: "Quel est le monument le plus visité situé à Paris ?",
+      options: [
+        "Le musée du Louvre",
+        "Notre-Dame de Paris",
+        "La Tour Eiffel",
+        "Le château de Versailles",
+      ],
       correct: 2,
     },
   ],
@@ -1742,6 +1941,17 @@ export const quizQuestions = {
       ],
       correct: 2,
     },
+    {
+      id: 13,
+      question: "Un employeur peut-il légalement refuser d'embaucher une femme enceinte ?",
+      options: [
+        "Oui, si le poste implique des risques pour la grossesse",
+        "Non, sauf dans les entreprises de moins de 10 salariés",
+        "Oui, pendant la période d'essai uniquement",
+        "Non, le refus d'embauche lié à la grossesse est une discrimination illégale",
+      ],
+      correct: 3,
+    },
   ],
 
   14: [
@@ -1929,6 +2139,28 @@ export const quizQuestions = {
         "Avoir plus de 18 ans",
         "Être de nationalité française",
         "Résider en France depuis plus de 5 ans",
+      ],
+      correct: 2,
+    },
+    {
+      id: 21,
+      question: "À quoi sert la Sécurité sociale en France ?",
+      options: [
+        "À financer uniquement les retraites des fonctionnaires",
+        "À rembourser les prêts immobiliers des foyers modestes",
+        "À prendre en charge les dépenses de santé, les retraites et les allocations familiales",
+        "À garantir une aide financière uniquement en cas de chômage",
+      ],
+      correct: 2,
+    },
+    {
+      id: 22,
+      question: "Votre enfant refuse d'aller à l'école : que devez-vous faire ?",
+      options: [
+        "Attendre qu'il soit prêt, l'école n'est pas obligatoire avant 7 ans",
+        "Contacter la mairie pour obtenir une dérogation",
+        "L'obliger à y aller, car l'instruction est obligatoire de 3 à 16 ans",
+        "Le laisser à la maison si vous lui enseignez vous-même",
       ],
       correct: 2,
     },
